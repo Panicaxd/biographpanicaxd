@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Test - Sweater Weather</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #0f172a;
+            color: white;
+        }
+        .test-result {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+        }
+        .success { border-left: 5px solid #10b981; }
+        .error { border-left: 5px solid #ef4444; }
+    </style>
+</head>
+<body>
+    <h1>🎵 Sweater Weather MP3 Test</h1>
+    
+    <div class="test-result" id="path-test">
+        <h3>1. Testing File Paths:</h3>
+        <div id="paths"></div>
+    </div>
+    
+    <div class="test-result" id="audio-test">
+        <h3>2. Testing Audio Playback:</h3>
+        <audio controls id="test-audio">
+            <source src="music/Sweater_Weathe.mp3" type="audio/mpeg">
+        </audio>
+        <div id="audio-status">Loading...</div>
+    </div>
+    
+    <script>
+        // Тест 1: Проверка путей
+        const paths = [
+            'music/Sweater_Weathe.mp3',
+            './music/Sweater_Weathe.mp3',
+            'Sweater_Weathe.mp3',
+            '../music/Sweater_Weathe.mp3'
+        ];
+        
+        const pathsDiv = document.getElementById('paths');
+        
+        paths.forEach(path => {
+            const div = document.createElement('div');
+            div.textContent = `Testing: ${path}... `;
+            
+            fetch(path, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        div.innerHTML += `<span style="color:#10b981">✅ Found</span>`;
+                        div.classList.add('success');
+                    } else {
+                        div.innerHTML += `<span style="color:#ef4444">❌ Not found (${response.status})</span>`;
+                        div.classList.add('error');
+                    }
+                })
+                .catch(error => {
+                    div.innerHTML += `<span style="color:#ef4444">❌ Error: ${error.message}</span>`;
+                    div.classList.add('error');
+                });
+            
+            pathsDiv.appendChild(div);
+        });
+        
+        // Тест 2: Проверка аудио
+        const audio = document.getElementById('test-audio');
+        const statusDiv = document.getElementById('audio-status');
+        
+        audio.addEventListener('loadeddata', () => {
+            statusDiv.innerHTML = `<span style="color:#10b981">✅ Audio loaded! Duration: ${audio.duration.toFixed(2)}s</span>`;
+            document.getElementById('audio-test').classList.add('success');
+        });
+        
+        audio.addEventListener('error', () => {
+            statusDiv.innerHTML = `<span style="color:#ef4444">❌ Error: ${audio.error?.message || 'Unknown error'}</span>`;
+            document.getElementById('audio-test').classList.add('error');
+        });
+        
+        // Показать текущий путь
+        console.log('Current directory:', window.location.pathname);
+    </script>
+</body>
+</html>

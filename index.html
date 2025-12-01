@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruslan Vasilyeu - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- В <head> добавьте: -->
+<script>
+    // Отладка загрузки страницы
+    console.log('=== PAGE LOAD DEBUG ===');
+    console.log('Document readyState:', document.readyState);
+    console.log('Window loaded:', window.performance.timing.domContentLoadedEventEnd);
+    
+    // Журнал ошибок
+    window.addEventListener('error', function(e) {
+        console.error('Global error:', e.error);
+    });
+</script>
+
+<!-- В конец <body> перед закрывающим тегом: -->
+<script src="integrated-music.js"></script>
+
+<!-- Отладка после загрузки -->
+<script>
+    window.addEventListener('load', function() {
+        console.log('=== WINDOW LOADED ===');
+        console.log('All resources loaded');
+        console.log('Audio elements on page:', document.querySelectorAll('audio').length);
+        
+        // Проверяем другие аудио элементы
+        document.querySelectorAll('audio').forEach((audio, i) => {
+            console.log(`Audio ${i}:`, {
+                src: audio.src,
+                id: audio.id,
+                error: audio.error,
+                paused: audio.paused
+            });
+        });
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruslan Vasilyeu - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <!-- Background Particles -->
+        <div class="particles" id="particles-js"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <!-- Theme Switcher -->
+                <div class="theme-switcher">
+                    <button id="theme-toggle" class="theme-btn" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Theme</span>
+                    </button>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-name">Ruslan Vasilyeu</span>
+                    <span class="hero-subtitle">
+                        <span class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-description">
+                    I create clean code and logical interfaces. Passionate about modern technologies 
+                    and turning ideas into working applications.
+                </p>
+                
+                <!-- Buttons -->
+                <div class="hero-buttons">
+                    <a href="#contacts" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
+                </div>
+                
+                <!-- Technologies -->
+                <div class="hero-tech">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Git/GitHub</span>
+                </div>
+            </div>
+            
+            <!-- 3D Dodecahedron Avatar -->
+            <div class="hero-3d-container">
+    <div id="dodecahedron-container"></div>
+    
+</div>
+        </div>
+        
+        <!-- Scroll Down -->
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <!-- Background Particles -->
+        <div class="particles" id="particles-about"></div>
+        
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-gradient">About Me</span>
+            </h2>
+            
+            <div class="about-grid">
+                <!-- Left Column - Text -->
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p class="about-text">
+                        Hello! I'm an aspiring frontend developer with a deep interest in creating 
+                        modern web applications. My journey in programming started with JavaScript 
+                        courses, and since then I've been constantly expanding my knowledge.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4>Fast Learner</h4>
+                                <p>Easily master new technologies and approaches</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-search"></i>
+                            <div>
+                                <h4>Detail-Oriented</h4>
+                                <p>Strive to write clean and understandable code</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h4>Creative</h4>
+                                <p>Find optimal solutions for complex tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Statistics -->
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>My Journey in Numbers</h3>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">Completed Projects</div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="200">0</div>
+                            <div class="stat-label">Hours of Practice</div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="7">0</div>
+                            <div class="stat-label">Technologies Learned</div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="99">0</div>
+                            <div class="stat-label">Motivation Level</div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 99%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>I believe that good code is not just a working program, 
+                        but an understandable and maintainable solution.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interests Section -->
+            <div class="interests-section">
+                <h3>What Inspires Me</h3>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4>Modern Frontend</h4>
+                        <p>React, Vue, modern UI development approaches</p>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>Creating intuitive and beautiful interfaces</p>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h4>Architecture</h4>
+                        <p>Proper code and project organization</p>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community</h4>
+                        <p>Open-source projects and knowledge sharing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts-section">
+        <!-- Background Particles -->
+        <div class="particles" id="particles-contacts"></div>
+        
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-gradient">Get in Touch</span>
+            </h2>
+            <p class="section-subtitle">Always open to new projects and interesting opportunities</p>
+            
+            <div class="contacts-grid">
+                <!-- GitHub -->
+                <div class="contact-card">
+                    <div class="contact-icon github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="contact-name">GitHub</h3>
+                    <p class="contact-description">My projects and source code</p>
+                    <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+                        <i class="fas fa-external-link-alt"></i> View Profile
+                    </a>
+                </div>
+                
+                <!-- Telegram -->
+                <div class="contact-card">
+                    <div class="contact-icon telegram">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3 class="contact-name">Telegram</h3>
+                    <p class="contact-description">Fast communication and chat</p>
+                    <a href="https://t.me/panicaxd" target="_blank" class="contact-link">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </a>
+                </div>
+                
+                <!-- Discord (Highlighted) -->
+                <div class="contact-card highlight">
+                    <div class="contact-icon discord">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3 class="contact-name">Discord</h3>
+                    <p class="contact-description">Community communication</p>
+                    <div class="discord-info">
+                        <div class="discord-id">
+                            <i class="fas fa-hashtag"></i>
+                            <span>panicaxd</span>
+                        </div>
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i> Copy ID
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-name">Email</h3>
+                    <p class="contact-description">For formal proposals</p>
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="contacts-footer">
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Usually respond within 1-2 hours</span>
+                </div>
+                
+                <div class="tags">
+                    <span class="tag">Open to collaboration</span>
+                    <span class="tag">Available for remote work</span>
+                    <span class="tag">Considering projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+ <!-- Аудиоплеер с отладкой -->
+<div class="music-player-minimal">
+    <button id="music-toggle" class="music-btn-minimal" title="Toggle music">
+        <i class="fas fa-play"></i>
+    </button>
+    
+    <div class="player-expanded">
+        <div class="track-info">
+            <span class="track-title" id="track-title">Loading...</span>
+            <div class="track-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <button class="control-btn" id="prev-track" title="Previous">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            
+            <div class="volume-container">
+                <i class="fas fa-volume-up volume-icon"></i>
+                <input type="range" class="volume-slider" min="0" max="100" value="50">
+            </div>
+            
+            <button class="control-btn" id="next-track" title="Next">
+                <i class="fas fa-step-forward"></i>
+            </button>
+            
+            <!-- Кнопка отладки -->
+            <button class="control-btn debug-btn" id="debug-audio" title="Debug">
+                <i class="fas fa-bug"></i>
+            </button>
+        </div>
+        
+        <!-- Отладочная информация -->
+        <div class="debug-info" id="debug-info" style="display: none;">
+            <div class="debug-item">Status: <span id="audio-status">Unknown</span></div>
+            <div class="debug-item">Volume: <span id="audio-volume">50%</span></div>
+            <div class="debug-item">Error: <span id="audio-error">None</span></div>
+        </div>
+    </div>
+    
+   <audio id="background-music" loop preload="metadata">
+ <audio controls id="test-audio">
+            <source src="music/Sweater_Weathe.mp3" type="audio/mpeg">
+        </audio>
+</audio>
+</div>
+</div>
+</div>
+</body>
+</html>
